@@ -8,7 +8,6 @@ public class App {
 
         return a + b;
     }
-
     public static String add(int...ints)
     {
        int result=0;
@@ -20,6 +19,42 @@ public class App {
            resultAsString += (i != (ints.length - 1)) ? (ints[i] + "+") : ints[i];
        }
        return resultAsString += "=" +result;
+    }
+
+    public static  float sub(float a, float b)
+    {
+
+        return a - b;
+    }
+    public static int sub(int...ints)
+    {
+        int result=0;
+        int result1=0;
+        int resultAsString=0;
+        for(int i=0;i<ints.length;i++)
+        {
+            result-=ints[i];
+            resultAsString = resultAsString - ((i != (ints.length - 1)) ? ("+" - ints[i]) : ints[i]);
+        }
+        //return resultAsString -= "=" +result;
+        return resultAsString=resultAsString-result;
+    }
+    public  static  float mul(float a, float b)
+    {
+
+        return a * b;
+    }
+    public static int mul(int...ints)
+    {
+        int result=0;
+        int result1=0;
+        int resultAsString=0;
+        for(int i=0;i<ints.length;i++)
+        {
+            result*=ints[i];
+            resultAsString *= (i != (ints.length - 1)) ? (ints[i] * "+") : ints[i];
+        }
+        return resultAsString *= "=" +result;
     }
 
     /*public static float mul(float a, float b)
@@ -56,6 +91,13 @@ public class App {
             case 1: {
                 result = add(6,7);
                 resultAsString=add(3,2,6,7,8,9);
+                System.out.println("addition is" + result);
+                System.out.println("addition is" + resultAsString);
+                break;
+            }
+            case 2: {
+                result = sub(8,7);
+                resultAsString=sub(9,8,7);
                 System.out.println("addition is" + result);
                 System.out.println("addition is" + resultAsString);
                 break;
