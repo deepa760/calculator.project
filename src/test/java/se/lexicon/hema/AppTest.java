@@ -61,7 +61,7 @@ public class AppTest {
         //Act
         float result = App.mul(number1, number2);
         //Assert
-        assertEquals(18,result,0.01);
+        assertEquals(18.0,result,0.01);
     }
     @Test
     public void addArrayTestingForVarargsmul()
@@ -79,15 +79,15 @@ public class AppTest {
         //Act
         float result = App.div(number1, number2);
         //Assert
-        assertEquals(4,result,0.01);
+        assertEquals(4.0,result,0.01);
     }
     @Test
     public void addArrayTestingForVarargsdiv()
     {
         //Act
-        int resultForTestingForVarargs=App.div(8,4);
+        float resultForTestingForVarargs=App.div(8,4);
         //Assert
-        assertEquals("8/4=2",resultForTestingForVarargs);
+        assertEquals("8/4=2.0",resultForTestingForVarargs);
     }
 
 }
