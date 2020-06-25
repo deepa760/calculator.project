@@ -57,12 +57,6 @@ public class App {
         return resultAsString=resultAsString * result;
     }
 
-    /*public static float mul(float a, float b)
-    {
-
-        return a * b;
-    }
-
     public static float div(float a, float b)
     {
         if (b == 0) {
@@ -73,7 +67,7 @@ public class App {
             return a / b;
         }
 
-    }*/
+    }
 
     public static void main(String[] args) {
         float number1=0;
@@ -109,11 +103,11 @@ public class App {
                 System.out.println("mul is" + result);
                 break;
             }
-            /*case 4: {
-                result = div(number1, number2);
+            case 4: {
+                result = div(72,8);
                 System.out.println("div is" + result);
                 break;
-            }*/
+            }
             default:
                 throw new java.lang.IllegalStateException("Unexpected value: " + choice);
         }
