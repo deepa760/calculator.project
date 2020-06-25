@@ -105,6 +105,7 @@ public class App {
             }
             case 4: {
                 result = div(72,8);
+                result=div(2,0);
                 System.out.println("div is" + result);
                 break;
             }
