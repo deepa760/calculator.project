@@ -35,5 +35,23 @@ public class AppTest {
         //Assert
         assertEquals("3+4+5+6+7+8=33",resultForTestingForVarargs);
     }
+    @Test
+    public void sub() {
+        //Arrange
+        float number1 = 6;
+        float number2 = 3;
+        //Act
+        float result = App.sub(number1, number2);
+        //Assert
+        assertEquals(3,result,0.01);
+    }
+    @Test
+    public void addArrayTestingForVarargsSub()
+    {
+        //Act
+        int resultForTestingForVarargsSub=App.sub(8,3,4);
+        //Assert
+        assertEquals("8-3-4=1",resultForTestingForVarargsSub);
+    }
 
 }

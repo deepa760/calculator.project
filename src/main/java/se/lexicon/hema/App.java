@@ -28,16 +28,14 @@ public class App {
     }
     public static int sub(int...ints)
     {
-        int result=0;
-        int result1=0;
-        int resultAsStringSub=0;
+        int subVarargs=0;
         for(int i=0;i<ints.length;i++)
         {
-            result-=ints[i];
-            resultAsStringSub = resultAsStringSub - ((i != (ints.length - 1)) ? (resultAsStringSub - ints[i]) : ints[i]);
+            subVarargs=ints[i]-subVarargs;
+
+            // if desired, do something useful with Product
         }
-        //return resultAsString -= "=" +result;
-        return resultAsStringSub=resultAsStringSub-result;
+        return subVarargs;
     }
     public  static  float mul(float a, float b)
     {
@@ -46,15 +44,14 @@ public class App {
     }
     public static int mul(int...ints)
     {
-        int result=0;
-        int result1=0;
-        int resultAsString=0;
+       int product=1;
         for(int i=0;i<ints.length;i++)
         {
-            result*=ints[i];
-            resultAsString = resultAsString * ((i != (ints.length - 1)) ? (resultAsString * ints[i]) : ints[i]);
+            product=product *ints[i];
+
+            // if desired, do something useful with Product
         }
-        return resultAsString=resultAsString * result;
+        return product;
     }
 
     public static float div(float a, float b)
@@ -66,14 +63,14 @@ public class App {
         } else {
             return a / b;
         }
-
     }
 
     public static void main(String[] args) {
         float number1=0;
-        float number2=0, result;
+        float number2=0,result;
         String resultAsString="";
         int resultAsStringSub=0;
+        int product=1;
         System.out.println("Enter the  numbers ");
         Scanner sc = new Scanner(System.in);
         //number1 = sc.nextFloat();
@@ -92,20 +89,22 @@ public class App {
             }
             case 2: {
                 result = sub(8,7);
-                resultAsStringSub=sub(19,8,7);
+                int subVarargs = sub(19, 8, 7);
                 System.out.println("Subtraction is" + result);
-                System.out.println("Subtraction  is" + resultAsStringSub);
+                System.out.println("Subtraction  is" + subVarargs);
                 break;
             }
 
             case 3: {
                 result = mul(8,9);
+                product = mul(10*10*10*10);
                 System.out.println("mul is" + result);
+                System.out.println("mul is" + product);
                 break;
             }
             case 4: {
                 result = div(72,8);
-                result=div(2,0);
+                float resultdiv = div(2, 0);
                 System.out.println("div is" + result);
                 break;
             }
