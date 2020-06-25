@@ -30,14 +30,14 @@ public class App {
     {
         int result=0;
         int result1=0;
-        int resultAsString=0;
+        int resultAsStringSub=0;
         for(int i=0;i<ints.length;i++)
         {
             result-=ints[i];
-            resultAsString = resultAsString - ((i != (ints.length - 1)) ? ("+" - ints[i]) : ints[i]);
+            resultAsStringSub = resultAsStringSub - ((i != (ints.length - 1)) ? (resultAsStringSub - ints[i]) : ints[i]);
         }
         //return resultAsString -= "=" +result;
-        return resultAsString=resultAsString-result;
+        return resultAsStringSub=resultAsStringSub-result;
     }
     public  static  float mul(float a, float b)
     {
@@ -52,9 +52,9 @@ public class App {
         for(int i=0;i<ints.length;i++)
         {
             result*=ints[i];
-            resultAsString *= (i != (ints.length - 1)) ? (ints[i] * "+") : ints[i];
+            resultAsString = resultAsString * ((i != (ints.length - 1)) ? (resultAsString * ints[i]) : ints[i]);
         }
-        return resultAsString *= "=" +result;
+        return resultAsString=resultAsString * result;
     }
 
     /*public static float mul(float a, float b)
@@ -79,6 +79,7 @@ public class App {
         float number1=0;
         float number2=0, result;
         String resultAsString="";
+        int resultAsStringSub=0;
         System.out.println("Enter the  numbers ");
         Scanner sc = new Scanner(System.in);
         //number1 = sc.nextFloat();
@@ -97,22 +98,18 @@ public class App {
             }
             case 2: {
                 result = sub(8,7);
-                resultAsString=sub(9,8,7);
-                System.out.println("addition is" + result);
-                System.out.println("addition is" + resultAsString);
+                resultAsStringSub=sub(19,8,7);
+                System.out.println("Subtraction is" + result);
+                System.out.println("Subtraction  is" + resultAsStringSub);
                 break;
             }
-            /*case 2: {
-                result = sub(number1, number2);
-                System.out.println("subtraction is" + result);
-                break;
-            }
+
             case 3: {
-                result = mul(number1, number2);
+                result = mul(8,9);
                 System.out.println("mul is" + result);
                 break;
             }
-            case 4: {
+            /*case 4: {
                 result = div(number1, number2);
                 System.out.println("div is" + result);
                 break;
