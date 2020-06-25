@@ -71,5 +71,23 @@ public class AppTest {
         //Assert
         assertEquals("8*3*4=96",resultForTestingForVarargsMul);
     }
+    @Test
+    public void div() {
+        //Arrange
+        float number1 = 12;
+        float number2 = 3;
+        //Act
+        float result = App.div(number1, number2);
+        //Assert
+        assertEquals(4,result,0.01);
+    }
+    @Test
+    public void addArrayTestingForVarargsdiv()
+    {
+        //Act
+        int resultForTestingForVarargs=App.div(8,4);
+        //Assert
+        assertEquals("8/4=2",resultForTestingForVarargs);
+    }
 
 }
