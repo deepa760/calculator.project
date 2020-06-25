@@ -53,5 +53,23 @@ public class AppTest {
         //Assert
         assertEquals("8-3-4=1",resultForTestingForVarargsSub);
     }
+    @Test
+    public void mul() {
+        //Arrange
+        float number1 = 6;
+        float number2 = 3;
+        //Act
+        float result = App.mul(number1, number2);
+        //Assert
+        assertEquals(18,result,0.01);
+    }
+    @Test
+    public void addArrayTestingForVarargsmul()
+    {
+        //Act
+        int resultForTestingForVarargsMul=App.mul(8,3,4);
+        //Assert
+        assertEquals("8*3*4=96",resultForTestingForVarargsMul);
+    }
 
 }
